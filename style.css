@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Lato", sans-serif;
+
 }
 html {
     scroll-behavior: smooth;
@@ -10,8 +13,16 @@ html {
 p{
     font-size: 14px;
     line-height: 25px;
+    color: gray;
 }
-
+a:hover {
+    color: tomato;
+  }
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  
 /* HEADER SECTION  */
 header{
     display: flex;
@@ -24,6 +35,8 @@ header{
 a{
     text-decoration: none;
     color: inherit;
+    transition: 0.5s ease;
+
 }
 .header-nav {
     display: flex;
@@ -59,6 +72,7 @@ header button {
     color: black;
     font-size: 16px;
     font-weight: 500;
+   
 }
 .menu {
     display: none;
@@ -97,7 +111,7 @@ header button {
     border-radius: 15px;
     border: 0.3px solid tomato;
     background-color: white;
-    margin-left: 5rem;
+    margin-left: 2rem;
     color: black;
 }
 
@@ -140,11 +154,22 @@ header button {
     width: 500px;
     height: 400px;
 }
+.supervisors-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 .plant-img {
     width: 300px;
     height: 300px;
 }
-
+.plant-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 
 /* WHERE OUR BLUE AGAVE  */
 
@@ -162,9 +187,15 @@ header button {
     height: 400px;
     margin-top: -150px;
 }
+.where-our-blue-agave-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 .map {
     position: absolute;
-    bottom: -170px;
+    bottom: -140px;
     right: -100px;
     width: 500px;
 }
@@ -203,12 +234,12 @@ header button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8rem 20rem 0rem 20rem;
-    gap: 5rem;
+    padding: 8rem 5rem 0rem 5rem;
+    gap: 9rem;
     
 }
 #insurance button{
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 15px;
     border: none;
     background-color: tomato;
@@ -226,19 +257,7 @@ header button {
 .insurance-card3 {
      margin-top: -60px;
 }
-.health-work-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-}
-.health-work-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 140px;
-}
+
 
 .icon-1,
 .icon-2,
@@ -265,8 +284,15 @@ header button {
    position: absolute;
    bottom: -70px;
    right: 0px;
-   width: 700px;
+   width: 600px;
    height: 500px;
+}
+
+.bottle-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
 }
 .savor-nature-textArea {
     position: absolute;
@@ -412,9 +438,11 @@ footer nav{
 
 /* MOBILE RESPONSIVE */
 
-@media (max-width: 910px) {
+@media (max-width: 720px) {
 
-  
+  *{
+    padding: 5px;
+  }
     
     p{
         font-size: 14px;
@@ -433,11 +461,14 @@ footer nav{
         background-color: white;
         color: black;
         width: 100%;
-        height: 100vh;
-        justify-content: center;
+        height: 60vh;
+        justify-content: start;
         font-size: 1.2rem;
-       
+        display: flex;
+        align-items: center;
+        margin-left: -1.5rem;
       }
+   
       .platform-contact-us-container{
         display: flex;
         flex-direction: column;
@@ -453,17 +484,31 @@ footer nav{
         font-size: 1.2rem;
         font-weight: 500;
     }
-      .header-nav {
-        display: flex;
-        align-items: center;
-        
-        padding: 2rem;
-        gap: 5rem;
-    }
       .closeNav {
         display: none;
       }
-    
+      .open {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      }
+      
+      .close {
+        clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
+      }
+      
+      .menu {
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+      
+      .menu:hover {
+        color: var(--primaryColor);
+        transition: 0.5s ease;
+      }
+      
+      main {
+        overflow-x: hidden;
+      }
+      
       nav a {
         transition: 0.5s ease color;
       }
@@ -476,6 +521,7 @@ footer nav{
         display: block;
         font-size: 2rem;
         cursor: pointer;
+        color: tomato;
       }
        
     a{
@@ -493,16 +539,20 @@ footer nav{
     }
     .logo {
         width: 90px;
+        margin-left: -2rem;
     }
     
     header button {
 
         list-style-type: none;
-        padding: 10px 20px;
+        padding: 10px 90px;
+        font-size: 20px;
         border-radius: 15px;
         border: none;
         background-color: tomato;
         color: white;
+        
+        
     }
     .platformBtn {
         list-style-type: none;
@@ -511,7 +561,7 @@ footer nav{
         border: none;
         background-color: white;
         color: black;
-        font-size: 14px;
+       
     }
     
     /* HERO SECTION */
@@ -519,36 +569,42 @@ footer nav{
     .hero-section {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2rem;
         align-items: center;
         justify-content: center;
-        padding: 0rem 2rem 2rem 1rem;
-        margin-top: 70rem;
+        padding: 0rem 2rem 2rem 0rem;
+        margin-top: 50rem;
     }
+    
     .hero-section img {
-        width: 400PX;
+        width: 350PX;
     }
     .hero-section h1 {
-        font-size: 50px;
+        font-size: 40px;
     }
     .hero-section p {
-        padding: 2rem 0 2rem 3rem;
+        padding: 1rem;
     }
     .hero-insuranceBtn{
-        padding: 10px 20px;
+      
         border-radius: 15px;
         border: none;
         background-color: tomato;
         margin-left: 5rem;
         color: white;
+        margin:1rem 2rem  1rem 2rem;
+        padding: 10px 90px;
+        font-size: 15px;
     }
     .hero-certificateBtn {
-        padding: 10px 20px;
+       
         border-radius: 15px;
         border: 0.3px solid tomato;
         background-color: white;
-        margin-left: 5rem;
+        margin-left: 2rem;
         color: black;
+        padding: 10px 75px;
+        font-size: 15px;
     }
     
     /* BULK AGAVE SECTION */
@@ -558,6 +614,7 @@ footer nav{
         grid-template-columns: 1fr;
         padding: 2rem 0 2rem 30px;
         line-height: 20px;
+        margin-left: -1rem;
     }
     .bulk-agave-section h2{
         font-size: 30px;
@@ -569,7 +626,7 @@ footer nav{
         padding-bottom: 15px;
     }
     .bulk-agave-section p{
-        padding-left: 5rem;
+        margin-left: -5rem; 
        
     }
     .bulk-agave-section button{
@@ -577,8 +634,10 @@ footer nav{
         border-radius: 15px;
         border: none;
         background-color: tomato;
-        margin: 2rem 0 0 5rem;
+        margin: 2rem 0 0 0.7rem;
         color: white;
+        padding: 10px 90px;
+        font-size: 15px;
     }
     .bulk-image-container {
         display: flex;
@@ -586,13 +645,27 @@ footer nav{
         align-items: end;
         justify-content: end;
     }
-    .supervisors-img {
-        width: 300px;
+   .supervisors-img {
+        width: 350px;
         height: 200px;
+        margin: 0 3rem 0 -1rem;
+    }
+    .supervisors-img img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
     .plant-img {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
+        margin: 2rem 3rem -2rem -1rem;
+    }
+    .plant-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
     
     
@@ -601,7 +674,7 @@ footer nav{
     .where-our-blue-agave {
         display:grid;
         grid-template-columns: 1fr;
-        padding: 8rem 2rem 2rem 0;
+        padding: 8rem 0rem 2rem 0;
     }
     .where-our-blue-agave-img-container {
         position: relative;
@@ -610,33 +683,37 @@ footer nav{
     .where-our-blue-agave-img{
         width: 350px;
         height: 300px;
-      
+       
     }
     .map {
         position: absolute;
-        bottom: -180px;
+        bottom: -140px;
         right: -40px;
-        width: 300px;
+        width: 260px;
     }
     .where-our-blue-agave-textArea{
-        padding: 9rem 2rem 3rem 2rem;
+        padding: 9rem 2rem 1rem 2rem;
     }
     
     .where-our-blue-agave-textArea h2{
         font-size: 25px;
         padding-bottom: 15px;
+        text-align: center;
     }
     
     .where-our-blue-agave-textArea p{
-        padding-left: 5rem;
+       margin-left: -5rem;
     }
     .where-our-blue-agave-textArea button{
-        padding: 10px 20px;
+       
         border-radius: 15px;
         border: none;
         background-color: tomato;
         margin: 1.5rem 0 0 5rem;
         color: white;
+        margin-left: 0.5rem;
+        padding: 10px 70px;
+        font-size: 15px;
     }
     
     /* INSURANCE */
@@ -645,45 +722,48 @@ footer nav{
         flex-direction: column;
         align-content: center;
         justify-content: center;
+        
     }
     .insurance-container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 4rem 3rem 4rem 3rem;
+        grid-template-columns: 200px 200px;
+        gap: 1rem;
+        margin: -4rem 4rem 2rem 1rem;
+
     }
     #insurance button{
-        padding: 10px 20px;
+       
         border-radius: 15px;
         border: none;
         background-color: tomato;
         color: white;
+        margin-left: -2rem;
+        padding: 10px 90px;
+        font-size: 15px;
     }
     .insurance-card2,
 .insurance-card3 {
-     margin-top: 0px;
+    margin-top: -10px;
+     display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        text-align: center;
+      
 }
     .insurance-card {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 10px;
+        gap: 5px;
         text-align: center;
+     
     }
-    .health-work-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
-    }
-    .health-work-card {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 140px;
-    }
-    
+ 
+   
+ 
     .icon-1,
     .icon-2,
     .icon-3,
@@ -697,6 +777,7 @@ footer nav{
     /* SAVOR NATURE */
     .savor-nature {
         position: relative;
+        margin-left: -2rem;
     }
     
     
@@ -706,12 +787,18 @@ footer nav{
         filter: brightness(30%);
     }
     .bottle-img {
-       position: absolute;
-       bottom: -70px;
-       right: 0px;
-       width: 300px;
-       height: 300px;
-    }
+        position: absolute;
+        bottom: -70px;
+        right: 0px;
+        width: 270px;
+        height: 300px;
+     }
+     .bottle-img img{
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: top;
+     }
     .savor-nature-textArea {
         position: absolute;
         bottom: 300px;
@@ -726,6 +813,8 @@ footer nav{
         background-color: tomato;
         margin-top: 20px;
         color: white;
+        padding: 10px 90px;
+        font-size: 15px;
     }
     
     /* CERTIFICATIONS */
@@ -735,7 +824,8 @@ footer nav{
         flex-direction: column;
         align-content: center;
         justify-content: center;
-        padding: 6rem 2rem; 
+        padding: 8rem 2rem;
+        margin: -2rem; 
         background-color: rgba(231, 222, 222, 0.292);
     }
     #certifications h2{
@@ -745,11 +835,13 @@ footer nav{
         padding: 2rem;
         text-align: center;
         font-size: 30px;
+        margin-left: -2rem;
     }
     .card-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px;
+        gap: 8px;
+        margin: 0 4rem 0 0;
         
     }
     
@@ -806,10 +898,18 @@ footer nav{
     .footer-nav{
         padding: 2rem 0 8rem 0;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: center; 
         
+    }
+    footer ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        gap: 30px;
+        list-style-type: none;
     }
     
     .social-icons {
@@ -846,7 +946,7 @@ footer nav{
         justify-content: center;
       background-color: black;
       color: white;
-      padding: 1rem;
+      padding: 1rem 2rem;
     }
     
     .developer-logo-div {
